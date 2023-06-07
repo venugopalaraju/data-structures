@@ -1,4 +1,4 @@
-package linear.linkedlist;
+package linear.linkedlist.single;
 
 public class LinkedList {
 
