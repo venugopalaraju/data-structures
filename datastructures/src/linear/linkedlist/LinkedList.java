@@ -1,60 +1,34 @@
-package linear.linkedlist.linkedlist;
+package linear.linkedlist;
 
 public class LinkedList {
 
     private Node head;
-    private class Node {
-        private Node next;
-        private String data;
-
-        public Node(String data) {
-            this.data = data;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setNext(Node next) {
-            this.next = next;
-        }
-
-        public String getData() {
-            return data;
-        }
-
-        public void setData(String data) {
-            this.data = data;
-        }
-
-    }
-
     public Node add(String data) {
         if(head==null){
             head = new Node(data);
         }else {
             Node temp = head;
-            while(temp.next !=null){
-                temp=temp.next;
+            while(temp.getNext() !=null){
+                temp= temp.getNext();
             }
-            temp.next = new Node(data);
+            temp.setNext(new Node(data));
         }
         return head;
     }
 
     public void delete(String data){
         if(head!=null){
-            if(head.data.equalsIgnoreCase(data) && head.getNext()!=null){
+            if(head.getData().equalsIgnoreCase(data) && head.getNext()!=null){
                 head = head.getNext();
             } else {
                 Node temp = head;
                 while(temp!=null){
-                    if(temp.next.data.equalsIgnoreCase(data)){
-                        temp.next = temp.next.next;
+                    if(temp.getNext().getData().equalsIgnoreCase(data)){
+                        temp.setNext(temp.getNext().getNext());
                         break;
                     }
                     else{
-                        temp = temp.next;
+                        temp = temp.getNext();
                     }
                 }
             }
