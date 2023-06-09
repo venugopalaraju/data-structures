@@ -1,10 +1,10 @@
-package linear.linkedlist.single;
+package singlelinkedlist;
 
 public class Node {
-        private Node next;
-        private String data;
+        public Node next;
+        public int data;
 
-        public Node(String data) {
+        public Node(int data) {
             this.data = data;
         }
 
@@ -16,11 +16,11 @@ public class Node {
             this.next = next;
         }
 
-        public String getData() {
+        public int getData() {
             return data;
         }
 
-        public void setData(String data) {
+        public void setData(int data) {
             this.data = data;
         }
 
