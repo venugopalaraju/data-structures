@@ -13,7 +13,6 @@ public class LinkedList {
             length = 1;
         }
     }
-
     public void append(int value) {
         Node newNode = new Node(value);
         if(length == 0){
@@ -22,6 +21,17 @@ public class LinkedList {
         } else {
             tail.next = newNode;
             tail = newNode;
+        }
+        length++;
+    }
+    public void prepend(int vaule){
+        Node newNode = new Node(vaule);
+        if(length==0){
+            head = newNode;
+            tail = newNode;
+        }else{
+            newNode.next = head;
+            head = newNode;
         }
         length++;
     }
@@ -40,6 +50,17 @@ public class LinkedList {
         tail = pre;
         length--;
         return tail;
+    }
+    public Node removeFirst(){
+        if(length==0) return null;
+        Node temp = head.next;
+        head = temp;
+        temp = null;
+        length--;
+        if(length == 0){
+            tail = null;
+        }
+        return head;
     }
 
     public void print(){
