@@ -8,5 +8,6 @@ public class BSTMain {
         bst.insert(11);
         bst.insert(6);
         System.out.println("Print 6 ::"+bst.root.left.right.value);
+        System.out.println("Contains 6 ::"+bst.contains(6));
     }
 }
