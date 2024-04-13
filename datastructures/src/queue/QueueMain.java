@@ -5,7 +5,7 @@ public class QueueMain {
         Queue queue = new Queue(1);
         queue.enqueue(2);
         queue.enqueue(3);
-        queue.dequeue();
+        System.out.println(queue.dequeue().value);
         queue.enqueue(4);
         queue.getFirst();
         queue.getLast();
