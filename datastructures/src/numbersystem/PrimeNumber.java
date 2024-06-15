@@ -11,7 +11,7 @@ public class PrimeNumber {
     private static boolean isPrime(int n) {
         if (n==1) return false;
         int c = 2;
-        while (c * c <= n){
+        while (c * c <= n){    //c<=Math.sqrt(n)
             if(n % c == 0){
                 return false;
             }

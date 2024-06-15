@@ -1,0 +1,9 @@
+There are 3 ways to define time complexity of any algorithm
+Best Case (Constant Time) -->Not possible
+Average Case (Linear Time)
+Worst Case (Linear TIme)
+Asymptotic Notations:
+--------------------
+Big O - Exact or Upper Bound (Linear Time)
+Theta - Exact (Constant Time)
+Omega - Exact or Lower Bound (Linear Time)

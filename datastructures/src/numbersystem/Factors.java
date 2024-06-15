@@ -2,15 +2,15 @@ package numbersystem;
 
 public class Factors {
     public static void main(String[] args) {
-        printFactorsOfNumber(50);
+        printFactorsOfNumber(16);
         System.out.println();
-        printFactorsOfNumber2(50);
+        printFactorsOfNumber2(16);
     }
 
     private static void printFactorsOfNumber2(int n) {
         for (int i=1;i<=Math.sqrt(n);i++){
             if(n%i==0){
-                if(n/i==1){
+                if(n/i==1 || n/i==i){
                     System.out.print(i+" ");
                 }else{
                     System.out.print(i+" "+n/i+" ");
