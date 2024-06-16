@@ -8,7 +8,7 @@ public class TransposeOfMatrix {
         PrintArray.printArray(transposeOfMatrixUsingSwap(array));
     }
 
-    private static int[][] transposeOfMatrixUsingSwap(int[][] array) {
+    public static int[][] transposeOfMatrixUsingSwap(int[][] array) {
         for (int i=0;i<array.length;i++) {
             for (int j=i+1;j<array.length;j++){
                 int temp = array[j][i];
