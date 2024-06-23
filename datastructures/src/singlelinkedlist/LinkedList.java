@@ -1,7 +1,7 @@
 package singlelinkedlist;
 
 public class LinkedList {
-    private Node head;
+    public Node head;
     private Node tail;
     private int length;
 
@@ -69,7 +69,7 @@ public class LinkedList {
             System.out.println("Linkedlist is Empty");
         } else {
             while (temp!=null){
-                System.out.println(temp.data);
+                System.out.print(temp.data+" ");
                 temp = temp.next;
             }
         }
